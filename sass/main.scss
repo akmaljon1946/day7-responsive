@@ -4,3 +4,102 @@
 @import"./generals";
 @import"./blocks/blocks";
 
+
+
+.responsive{
+  max-width: 1240px;
+  min-width: 300px;
+  padding-top: 20px;
+
+  border:3px solid #000000;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #6161D3;
+  color: #ffffff;
+
+
+}
+
+@media only screen and (max-width: 1100px) {
+  .responsive {
+        padding: {
+          top: 30px;
+          right: 60px;
+          left: 60px;
+          bottom: 50px;
+        }
+
+    &__img {
+     border: 2px solid #ffffff;
+      border-radius: 10px;
+    }
+
+      &__heading {
+        font-size: 14px;
+      }
+
+      &__text {
+        font-size: 11px;
+      }
+
+
+  }
+
+}
+
+@media only screen and (max-width: 780px){
+.responsive{
+    
+         display: flex;
+         flex-direction: column;
+         color: aqua;
+ 
+      &__img{
+        order: 1;
+        border-radius:10px;
+      }
+    
+
+       &__heading {
+         font-size: 14px;
+         order: -2;
+       }
+
+       &__text {
+         font-size: 11px;
+         order: -1;
+       }
+}
+
+}
+
+
+@media only screen and (max-width: 500px){
+  .responsive{
+
+  &__img--visually-hidden{
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        margin: -1px;
+    
+  }
+       &__heading {
+         font-size: 14px;
+       }
+
+       &__text {
+         
+         font-size: 11px;
+       }
+    
+
+  } 
+}
+  
